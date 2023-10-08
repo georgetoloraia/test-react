@@ -1,0 +1,122 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+#navigation{
+  display: inline-block;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.swiper-wrapper {
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+.header-inner {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    /* text-align:left; */
+}
+
+.header-bg {
+  background-color: darkgray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  -webkit-transform: translate3d(0,-100%,0);
+  transform: translate3d(0,-100%,0);
+  -webkit-transition: -webkit-transform .7s cubic-bezier(.19,1,.22,1) .15s;
+  transition: -webkit-transform .7s cubic-bezier(.19,1,.22,1) .15s;
+  transition: transform .7s cubic-bezier(.19,1,.22,1) .15s;
+  transition: transform .7s cubic-bezier(.19,1,.22,1) .15s,-webkit-transform .7s cubic-bezier(.19,1,.22,1) .15s
+}
+
+#controls,#header {
+  z-index: 100;
+  left: 0
+}
+
+
+/* VIDEO ---------------------- VIDEO -------------- VIDEO -------------- */
+
+/* Apply basic styles to the video container */
+.video-container {
+  position: absolute;
+  width: 100%;
+  max-width: auto; /* Adjust this to your desired maximum width */
+  margin: 0 auto;
+}
+
+/* Style the video element */
+#fullscreen-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Define the full-screen styles using the :fullscreen pseudo-element */
+#fullscreen-video:fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Ensure the video is on top of other content */
+  background-color: #000; /* Optional: Set a background color for the full-screen mode */
+}
